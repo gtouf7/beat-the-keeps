@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+h1 {
+    font-family:saira;
+    color: #fff;
+    margin: auto;
+    opacity: 1;
+    text-align: center;
+    font-size: 55px;
+}
+h2 {
+    font-family: saira;
+    color:aliceblue;
+    text-align: center;
+}
+
+#startGame {
+    width: 20%;
+    height: 90px;
+    border-radius: 30px;
+    background-color: #2e62d1;
+    color: #fff;
+    font-family: saira;
+    font-size: 32px;
+    left: 40%;
+    bottom: 30%;
+    position: absolute;
+    cursor: pointer;
+}
+/*score board */
+#scoreboard {
+    width: 80%;
+    opacity: 0.85;
+    border-radius: 10px;
+    left: 10%;
+    height: 500px;
+    top: 10%;
+    position: absolute;
+    background-color: grey;
+}
+#scoreboard h2 {font-size: 36px;}
+
+h3 {
+    font-family: saira;
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+}
+/* opening screen */
+#welcome-screen {
+    width: 80%;
+    opacity: 0.85;
+    border-radius: 10px;
+    left: 10%;
+    height: 500px;
+    top: 10%;
+    position: absolute;
+    background-color: grey;
+}
+
+#endMsg {
+    width: 80%;
+    opacity: 0.85;
+    border-radius: 10px;
+    left: 10%;
+    height: 500px;
+    top: 10%;
+    position: absolute;
+    background-color: grey;
+}
+
+#msg {
+    color: white;
+    font-family: saira;
+    display: table;
+    margin: 0 auto;
+    font-size: 100px;
+}
+
+#playAgain {
+    width: 20%;
+    height: 90px;
+    border-radius: 30px;
+    background-color: #2e62d1;
+    color: #fff;
+    font-family: saira;
+    font-size: 32px;
+    left: 40%;
+    bottom: 30%;
+    position: absolute;
+    cursor: pointer;
+}
+
+            /* STADIUM */
+#stadio {
+    width: 100%;
+    margin-bottom: -26%;
+}
+
+            /* TURF */
+#turf {
+    background-color:#9BCF53;
+    width:100%;
+    height:100vh;
+    position: relative;
+}
+
+        /* GOALPOST */
+
+#goalpost {
+    width: 450px;
+    height: 180px;
+    background-color: #fff;
+    position: absolute;
+}
+
+#inner-goal {
+    width: 430px;
+    height: 180px;
+    background-color: #9BCF53;
+    margin-left: 8px;
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+/* clickable direction divs */
+.direction {
+    cursor: pointer;
+}
+#left-dir {
+    height: 160px;
+    width: 170px;
+    background-color: transparent;
+}
+#center-dir {
+    height: 160px;
+    width: 170px;
+    background-color:transparent;
+}
+#right-dir {
+    height: 160px;
+    width: 170px;
+    background-color: transparent;
+}
+
+#goal {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+            /* BALL */
+#ball img {
+    width: 40px;
+    height: 40px;
+}
+
+#ball {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-60%);
+    /* animation-name: shootLeft; */
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    /* animation-direction: forwards; */
+}
+/* GOALIE */
+#gk {
+    width: auto;
+    height: 180px;
+    z-index: 3;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    position: absolute;
+}
+
+
+/* GOALS */
+@keyframes shootLeft {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+    100% {
+        bottom: 86%;
+        left: 42%;
+        transform: translateX(-100%) translateY(-50%);
+    }
+}
+
+@keyframes shootCenter {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+    100% {
+        bottom: 86%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
+@keyframes shootRight {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+    100% {
+        bottom: 86%;
+        left: 60%;
+        transform: translateX(0) translateY(-50%);
+    }
+}
+/* MISSED SHOTS */
+@keyframes missedLeft {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        bottom: 75%;
+        left: 40%;
+        transform: translateX(-100%) translateY(-50%);
+    }
+}
+@keyframes missedCenter {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        bottom: 75%;
+        left: 50%;
+        transform: translateX(-100%) translateY(-50%);
+    }
+}
+@keyframes missedRight {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        bottom: 70%;
+        left: 60%;
+        transform: translateX(-100%) translateY(-50%);
+    }
+}
+
+/* GOALKEEPER DIVING */
+@keyframes gkLeft {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-90deg) translateY(-60%);
+    }
+}
+
+@keyframes gkRight {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg) translateY(-60%);
+    }
+}
+
+@media only screen and (max-width: 828px) {
+    #startGame {
+        max-width: 60%;
+        max-height: 100px;
+        font-size: 20px;
+    }
+    #welcome-screen {
+        max-height: 400px;
+        max-width: 100%;
+    }
+
+    #endMsg {
+        max-height: 400px;
+        max-width: 100%; 
+    }
+    #playAgain {
+        max-width: 60%;
+        max-height: 100px;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    #startGame {
+        width: 200px;
+        height: 70px;
+        font-size: 20px;
+        bottom: 110%;
+        left: 20%;
+    }
+    #welcome-screen {
+        max-height: 400px;
+        max-width: 100%;
+        margin-top: 50%;
+    }
+
+    #scoreboard {
+        width: 100%;
+        height: 80px;
+        left: 0%;
+    }
+    #scoreboard h2, h3 {
+        font-size: 10px;
+    }
+    #goalpost {
+        width: 300px;
+        overflow: hidden;
+        height: 180px;
+    }
+    #left-dir {
+        width: 100px;
+    }
+    #center-dir {
+        width: 100px;
+    }
+    #right-dir {
+        width: 100px;
+    }
+    #inner-goal {width:280px;}
+    #gk {
+        height: 140px;
+        bottom: 0;
+        left: 70px;
+    }
+
+    #endMsg {
+        max-height: 400px;
+        max-width: 100%;
+        margin-top: 50%; 
+    }
+    #msg {
+        font-size: 60px;
+        margin-top: 50%;
+        text-align: center;
+    }
+    #playAgain {
+        width: 200px;
+        height: 70px;
+        font-size: 20px;
+        bottom: 110%;
+        left: 20%;
+    }
+}
+

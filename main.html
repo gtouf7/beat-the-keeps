@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Beat The Keeps</title>
+        <link rel="stylesheet" href="styles/style.css">
+        <script async defer src="scripts/script.js"></script>
+    </head>
+    <body>
+        <div id="welcome-screen">
+            <h1>Beat the Keeps!</h1>
+            <h2>Click in the goal to shoot the ball! Score more goals than goalie saves and win! You have 10 tries.</h2>
+            <button id="startGame">NEW GAME</button>
+        </div>
+        <div id="scoreboard">
+            <h2>SCOREBOARD</h2>
+            <h3>Player: <span id="yourScore"></span></h3>
+            <h3>Goalkeeper:<span id="goalieScore"></span></h3>
+        </div>
+        <div id="endMsg">
+            <span id="msg"></span>
+            <button id="playAgain">PLAY AGAIN</button>
+        </div>
+        <img id="stadio" src="images/stamford-bridge.png" alt="a football stadium">
+        
+       <div id="turf">
+            <div id="goal">
+                <div id="goalpost">
+                    <div id="inner-goal">
+                        <div id="left-dir" class="direction"></div>
+                        <div id="center-dir" class="direction"><img id="gk" src="images/gk.png" alt="goalkeeper"></div>
+                        <div id="right-dir" class="direction"></div>
+                    </div>               
+                </div>
+            <div id="ball"><img src="images/football.png" alt="a soccer ball"></div>
+            </div>
+        </div>
+    </body>
+</html>
